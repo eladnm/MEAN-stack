@@ -1,0 +1,39 @@
+<a href="#/todos">Go Back</a>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add Task</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form ng-submit="addTodo()">
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" class="form-control" ng-model="todo.description" placeholder="Description">
+        </div>
+          <label>ID</label>
+          <input type="text" class="form-control" ng-model="todo.id" placeholder="ID">
+        <div class="form-group">
+          <label>Select Customer</label>
+          <input type="text" class="form-control" ng-model="todo.customer_name" placeholder="Customer Name">
+        <div class="form-group">
+          <label>Date</label>
+          <input type="text" class="form-control" ng-model="todo.date" placeholder="Date">
+        </div>
+        <div class="form-group">
+          <label>Completed</label>
+          <select class="form-control" ng-model="todo.mission" placeholder="Completed">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+          </select>
+        </div>
+        <div ng-repeat="family in families">
+        <div class="col-md-6">
+          <div class="col-md-6">
+            <h4><label for="">Name:</label> {{family.name}}</h4>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
